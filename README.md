@@ -42,6 +42,11 @@ This script takes a transcript file and an original video to generate a new vide
 python transcript2subvid.py --input_transcript /path/to/transcript.txt --input_video /path/to/video.mp4 --output_video /path/to/video_with_subtitles.mp4
 ```
 
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Dependencies
 
