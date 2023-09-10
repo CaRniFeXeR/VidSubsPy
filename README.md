@@ -6,7 +6,7 @@ automated video subtitles creation using whisperx, moviepy and optional chatGPT 
 
 This Python library provides a comprehensive solution for generating subtitles for videos. It leverages:
 
-- **Whisper ASR** for speech-to-text transcription.
+- **WhisperX ASR** for speech-to-text transcription.
 - **ChatGPT** for optional translation of the transcription.
 - **MoviePy** for generating videos with subtitles.
 
@@ -14,12 +14,12 @@ This Python library provides a comprehensive solution for generating subtitles f
 
 ### 1. Video to Transcript (`vid2transcript.py`)
 
-This script converts a given video file into a transcript file. It uses Whisper ASR for the transcription process.
+This script converts a given video file into a transcript file (json). It uses WhisperX ASR for the transcription process.
 
 #### Usage:
 
 ```bash
-python vid2transcript.py --input_video /path/to/video.mp4 --output_transcript /path/to/transcript.txt
+python vid2transcript.py --input_video /path/to/video.mp4 --output_transcript /path/to/transcript.json
 ```
 
 ### 2. Translate Transcript (`translatetranscript.py`)
@@ -29,7 +29,7 @@ This script translates an existing transcript file into another language. The tr
 #### Usage:
 
 ```bash
-python translatetranscript.py --input_transcript /path/to/transcript.txt --output_transcript /path/to/translated_transcript.txt --target_language es
+python translatetranscript.py --input_transcript /path/to/transcript.json --output_transcript /path/to/translated_transcript.json --target_language es
 ```
 
 ### 3. Transcript to Subtitled Video (`transcript2subvid.py`)
@@ -39,18 +39,18 @@ This script takes a transcript file and an original video to generate a new vide
 #### Usage:
 
 ```bash
-python transcript2subvid.py --input_transcript /path/to/transcript.txt --input_video /path/to/video.mp4 --output_video /path/to/video_with_subtitles.mp4
+python transcript2subvid.py --input_transcript /path/to/transcript.json --input_video /path/to/video.mp4 --output_video /path/to/video_with_subtitles.mp4
 ```
 
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.json
 ```
 
 ## Dependencies
 
-- Whisper ASR
+- Whisper X ASR
 - ChatGPT (Optional for translation)
 - MoviePy
 
