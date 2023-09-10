@@ -31,13 +31,13 @@ class SubtitleHandler:
         for segment in transcript.segments:
             overlay = TextOverlay(segment.start, segment.end,"")
             words = segment.text.split(" ")
-            n_word_line = 0
+            word_line_count = 0
             for word in words:
-                n_word_line += 1
+                word_line_count += 1
                 overlay.text += word + " "
-                if n_word_line >= self.max_word_per_line or self._new_line_symbol_in_word(word):
+                if word_line_count >= self.max_word_per_line or self._new_line_symbol_in_word(word):
                     overlay.text += "\n"
-                    n_word_line = 0
+                    word_line_count = 0
         
             overlays.append(overlay)
         
