@@ -4,7 +4,7 @@ automated video subtitles creation using whisperx, moviepy and optional chatGPT 
 
 ## Overview
 
-This Python library provides a comprehensive solution for generating subtitles for videos. It leverages:
+This Python library provides a comprehensive solution for generating subtitles for videos in different languages. It leverages:
 
 - **WhisperX ASR** for speech-to-text transcription.
 - **ChatGPT** for optional translation of the transcription.
@@ -45,7 +45,7 @@ python transcript2subvid.py --input_transcript /path/to/transcript.json --input_
 ## Installation
 
 ```bash
-pip install -r requirements.json
+pip install -r requirements.txt
 ```
 
 ## Dependencies
